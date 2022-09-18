@@ -60,6 +60,7 @@ func LoopThroughDir(dir string, wg *sync.WaitGroup, filesChannel chan int64, dir
 			if err != nil {
 				panic(err)
 			}
+
 			filesChannel <- info.Size()
 		}
 	}
